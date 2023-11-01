@@ -1,0 +1,61 @@
+[side-bar]
+  width: 300px
+  height: 100%
+  @include flex-colum(space-between)
+  @include border(left)
+
+[side-bar] > div
+  height: 170px
+  margin: 5px
+  padding: 5px
+  @include border()
+
+[messages]
+  height: 100%
+  padding: 10px
+  line-height: 20px
+
+[messages] h3
+  text-align: center
+  color: $green100
+  font-family: $font-play
+  padding-bottom: 10px
+  @include border(bottom)
+
+[messages] p
+  margin-top: 10px
+  text-align: justify-all
+
+[messages] p code
+  font-family: $font-play
+
+[nav-links]
+  @include flex-colum(center)
+  height: 400px
+
+[nav-links] > ul
+  width: 100%
+  list-style: none
+  text-align: center
+  align-self: center
+  line-height: 50px
+
+[nav-links] > ul > li
+  cursor: pointer
+  @include border(top)
+
+[nav-links] > ul > li:last-child
+  @include border(bottom)
+
+[nav-links] > ul > li:hover
+  color: $green100
+  font-size: calc(1em + 8px)
+  @include border(top-bottom, $green100)
+
+[nav-links] > ul > li:active
+  font-size: inherit
+
+[nav-links] > ul > li > a
+  text-decoration: none
+  color: inherit
+

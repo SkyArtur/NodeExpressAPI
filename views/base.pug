@@ -1,0 +1,22 @@
+extends layout
+
+block base
+    section(content)
+        div
+            div
+                block content
+
+    aside(side-bar)
+        div
+            div(messages)
+                if message
+                    h3 #{message.title}
+                    p: code #{message.text}
+                else
+                    h3 Node Express API
+                    p: code Bem-vindo!
+        nav(nav-links)
+            ul
+                li(new-link) Novo Registro
+                li(update-link) Atualizar Registro
+                li(delete-link) Deletar Registro

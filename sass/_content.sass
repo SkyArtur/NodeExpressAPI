@@ -1,0 +1,20 @@
+[content]
+  padding: 5px
+  width: 575px
+  height: 100%
+
+
+[content] > div
+  width: 565px
+  height: 565px
+  @include flex-row(center)
+  @include border()
+
+[content] > div > div
+  width: 550px
+  height: 550px
+  align-self: center
+  @include flex-row(center)
+  @include shadow(true)
+  @include bg-theme($light200, $black100)
+  @include border()

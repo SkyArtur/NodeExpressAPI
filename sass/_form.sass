@@ -1,0 +1,63 @@
+[form-pessoa]
+  width: 85%
+  height: 85%
+  align-self: center
+  border-radius: 10px
+  align-items: center
+  @include shadow()
+  @include flex-colum(space-between)
+  @include bg-theme(white, $black100)
+
+[form-pessoa] > div:first-child
+  @include bg-theme()
+  @include flex-colum(center)
+  text-align: center
+  width: 100%
+  height: 75px
+
+[form-pessoa] > form
+  width: 100%
+  height: 280px
+  align-items: center
+  @include border(top, $light200)
+  @include flex-colum(space-evenly)
+
+[form-pessoa] input
+  height: 35px
+  width: 100%
+  padding-left: 10px
+  font-family: $font-mono
+  @include border(true, $light100)
+
+[input-group]
+  gap: 10px
+  @include flex-row()
+  width: 375px
+
+[input-group='1'] input[type='text']
+  width: 240px
+
+[input-group='2'] input[type='text']
+  margin-left: 10px
+  width: 100px
+
+[input-group] input[type='submit']
+  height: 45px
+  font-size: 15px
+  @include bg-theme()
+
+[input-group] input[type='submit']:hover
+  @include bg-theme($green100, $gray100)
+
+[input-group] input[type='submit']:active
+  color: $red200
+
+[add-messages], [update-message]
+  width: 250px
+
+[add-messages], [update-message] h3
+  color: $red200
+  text-align: center
+
+[add-messages], [update-message] p
+  text-align: justify-all

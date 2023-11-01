@@ -1,0 +1,10 @@
+extends form
+
+block secondary
+    div(add-messages)
+        h3 #{add_message.title}
+        p #{add_message.text}
+
+block input
+    div(input-group='3')
+        input(type='submit' formmethod='POST' formaction='/new')

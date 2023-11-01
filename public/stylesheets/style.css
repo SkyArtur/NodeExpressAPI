@@ -1,0 +1,344 @@
+@import url("https://fonts.googleapis.com/css2?family=Play&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sometype+Mono:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+:root {
+  --color-black100: #0c0c0c;
+  --color-black200: #0c0c0c;
+  --color-dark100: #252525;
+  --color-dark200: #3e3e3e;
+  --color-gray100: #545454;
+  --color-gray200: #808080;
+  --color-light100: #b9b9b9;
+  --color-light200: #dcdcdc;
+  --color-red100: #952020;
+  --color-red200: #ed3f3f;
+  --color-green100: #7dbe42;
+  --color-green200: #19941b;
+}
+
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, th {
+  font-family: "Bebas Neue", sans-serif;
+}
+
+p, label, li, td, small {
+  font-family: "Red Hat Display", sans-serif;
+}
+
+code input {
+  font-family: "Sometype Mono", monospace;
+}
+
+body, html {
+  width: 100vw;
+  height: 100vh;
+}
+
+body > div:nth-child(1) {
+  width: 100vw;
+  height: 100vh;
+  background-color: #252525;
+  color: #dcdcdc;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+[container] {
+  width: 875px;
+  height: 650px;
+  align-self: center;
+  display: grid;
+  grid-template-rows: 50px auto 25px;
+  grid-template-columns: auto;
+  background-color: #3e3e3e;
+  color: #b9b9b9;
+}
+
+[container] > header {
+  text-align: center;
+  align-items: center;
+  gap: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #151515;
+  color: #b9b9b9;
+}
+
+[container] > header > img {
+  width: 30px;
+  height: 30px;
+}
+
+[container] > header > h1 > a {
+  color: inherit;
+  text-decoration: none;
+}
+
+[container] > header > h1 > a:hover {
+  color: #7dbe42;
+}
+
+[container] > main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+[container] > footer {
+  border-top: 1px solid #545454;
+  text-align: center;
+}
+
+[content] {
+  padding: 5px;
+  width: 575px;
+  height: 100%;
+}
+
+[content] > div {
+  width: 565px;
+  height: 565px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border: 1px solid #545454;
+  border-radius: 5px;
+}
+
+[content] > div > div {
+  width: 550px;
+  height: 550px;
+  align-self: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  box-shadow: inset 0 0 5px 1px #454545;
+  background-color: #dcdcdc;
+  color: #0c0c0c;
+  border: 1px solid #545454;
+  border-radius: 5px;
+}
+
+[side-bar] {
+  width: 300px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-left: 1px solid #545454;
+}
+
+[side-bar] > div {
+  height: 170px;
+  margin: 5px;
+  padding: 5px;
+  border: 1px solid #545454;
+  border-radius: 5px;
+}
+
+[messages] {
+  height: 100%;
+  padding: 10px;
+  line-height: 20px;
+}
+
+[messages] h3 {
+  text-align: center;
+  color: #7dbe42;
+  font-family: "Play", sans-serif;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #545454;
+}
+
+[messages] p {
+  margin-top: 10px;
+  text-align: justify-all;
+}
+
+[messages] p code {
+  font-family: "Play", sans-serif;
+}
+
+[nav-links] {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 400px;
+}
+
+[nav-links] > ul {
+  width: 100%;
+  list-style: none;
+  text-align: center;
+  align-self: center;
+  line-height: 50px;
+}
+
+[nav-links] > ul > li {
+  cursor: pointer;
+  border-top: 1px solid #545454;
+}
+
+[nav-links] > ul > li:last-child {
+  border-bottom: 1px solid #545454;
+}
+
+[nav-links] > ul > li:hover {
+  color: #7dbe42;
+  font-size: calc(1em + 8px);
+  border-top: 2px solid #7dbe42;
+  border-bottom: 2px solid #7dbe42;
+}
+
+[nav-links] > ul > li:active {
+  font-size: inherit;
+}
+
+[nav-links] > ul > li > a {
+  text-decoration: none;
+  color: inherit;
+}
+
+[table-persons] {
+  width: 535px;
+  height: 535px;
+  align-self: center;
+  padding: 5px;
+  overflow-y: auto;
+}
+
+[table-persons] > table {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+  line-height: 40px;
+}
+
+[table-persons] > table > thead {
+  background-color: #252525;
+  color: #b9b9b9;
+}
+
+[table-persons] > table > tbody tr:nth-of-type(even) {
+  background-color: #dcdcdc;
+  color: #3e3e3e;
+}
+
+[table-persons] > table > tbody tr:nth-of-type(odd) {
+  background-color: white;
+  color: #3e3e3e;
+}
+
+[table-persons] > table > tbody tr:hover {
+  background-color: #7dbe42;
+  color: #545454;
+}
+
+[table-persons] > table > tbody > tr > td:nth-child(2) {
+  cursor: pointer;
+}
+
+[table-persons] > table > tbody > tr > td:nth-child(2):hover {
+  font-weight: bolder;
+  color: #ed3f3f;
+}
+
+[form-pessoa] {
+  width: 85%;
+  height: 85%;
+  align-self: center;
+  border-radius: 10px;
+  align-items: center;
+  box-shadow: 0 0 5px 1px #454545;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+  color: #0c0c0c;
+}
+
+[form-pessoa] > div:first-child {
+  background-color: #3e3e3e;
+  color: #b9b9b9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: 75px;
+}
+
+[form-pessoa] > form {
+  width: 100%;
+  height: 280px;
+  align-items: center;
+  border-top: 1px solid #dcdcdc;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+[form-pessoa] input {
+  height: 35px;
+  width: 100%;
+  padding-left: 10px;
+  font-family: "Sometype Mono", monospace;
+  border: 1px solid #b9b9b9;
+  border-radius: 5px;
+}
+
+[input-group] {
+  gap: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  width: 375px;
+}
+
+[input-group="1"] input[type=text] {
+  width: 240px;
+}
+
+[input-group="2"] input[type=text] {
+  margin-left: 10px;
+  width: 100px;
+}
+
+[input-group] input[type=submit] {
+  height: 45px;
+  font-size: 15px;
+  background-color: #3e3e3e;
+  color: #b9b9b9;
+}
+
+[input-group] input[type=submit]:hover {
+  background-color: #7dbe42;
+  color: #545454;
+}
+
+[input-group] input[type=submit]:active {
+  color: #ed3f3f;
+}
+
+[add-messages], [update-message] {
+  width: 250px;
+}
+
+[add-messages], [update-message] h3 {
+  color: #ed3f3f;
+  text-align: center;
+}
+
+[add-messages], [update-message] p {
+  text-align: justify-all;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,36 @@
+extends base
+
+block content
+    div(form-pessoa)
+        div
+            h2 Novo Registro
+        div
+            block secondary
+        form(enctype='application/x-www-form-urlencoded')
+            if user
+                input(type='hidden' name='id' value=`${user.id}`)
+                div(input-group='2')
+                    div
+                        label(for='height') Altura
+                        input(type='text' id='height' name='height' value=`${user.height}`)
+                    div
+                        label(for='weight') Peso
+                        input(type='text' id='weight' name='weight' value=`${user.weight}`)
+            else
+                div(input-group='1')
+                    div
+                        label(for='name') Nome
+                        input(type='text' id='name' name='name')
+                    div
+                        label(for='birth') Nascimento
+                        input(type='date' id='birth' name='birth')
+                div(input-group='2')
+                    div
+                        label(for='height') Altura
+                        input(type='text' id='height' name='height')
+                    div
+                        label(for='weight') Peso
+                        input(type='text' id='weight' name='weight')
+            block input
+                div(input-group='3')
+                    input(type='submit' formmethod='POST' formaction='/new')

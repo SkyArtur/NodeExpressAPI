@@ -1,0 +1,11 @@
+extends form
+
+block secondary
+    div(update-message)
+        if user
+            h3 #{user.name}
+            p #{user.birth}
+
+block input
+    div(input-group='3')
+        input(type='submit' formmethod='POST' formaction='/update')

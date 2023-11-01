@@ -1,0 +1,20 @@
+extends base
+
+block content
+    div(table-persons)
+        table
+            thead
+                tr
+                    th #
+                    th nome
+                    th nascimento
+                    th altura
+                    th peso
+            tbody
+                each person in persons
+                    tr
+                        td: input(type='radio' radio-persons name='person_id' value=`${person.id}`)
+                        td #{person.name}
+                        td #{person.birth}
+                        td #{person.height}
+                        td #{person.weight}

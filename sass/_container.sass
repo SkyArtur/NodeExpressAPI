@@ -1,0 +1,35 @@
+[container]
+  width: 875px
+  height: 650px
+  align-self: center
+  display: grid
+  grid-template-rows: 50px auto 25px
+  grid-template-columns: auto
+  @include bg-theme($dark200, $light100)
+
+[container] > header
+  text-align: center
+  align-items: center
+  gap: 10px
+  @include flex-row(center)
+  @include bg-theme($black200, $light100)
+
+[container] > header > img
+  width: 30px
+  height: 30px
+
+[container] > header > h1 > a
+  color: inherit
+  text-decoration: none
+
+[container] > header > h1 > a:hover
+  color: $green100
+
+
+
+[container] > main
+  @include flex-row(space-between)
+
+[container] > footer
+  @include border(top)
+  text-align: center

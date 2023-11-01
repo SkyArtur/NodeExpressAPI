@@ -1,0 +1,31 @@
+[table-persons]
+  width: 535px
+  height: 535px
+  align-self: center
+  padding: 5px
+  overflow-y: auto
+
+[table-persons] > table
+  width: 100%
+  text-align: center
+  border-collapse: collapse
+  line-height: 40px
+
+[table-persons] > table > thead
+  @include bg-theme($dark100, $light100)
+
+[table-persons] > table > tbody tr:nth-of-type(even)
+  @include bg-theme($light200, $dark200)
+
+[table-persons] > table > tbody tr:nth-of-type(odd)
+  @include bg-theme(white, $dark200)
+
+[table-persons] > table > tbody tr:hover
+  @include bg-theme($green100, $gray100)
+
+[table-persons] > table > tbody > tr > td:nth-child(2)
+  cursor: pointer
+
+[table-persons] > table > tbody > tr > td:nth-child(2):hover
+  font-weight: bolder
+  color: $red200

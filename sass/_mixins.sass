@@ -1,0 +1,52 @@
+@mixin root()
+  \:root
+    --color-black100: #{ $black100 }
+    --color-black200: #{ $black100 }
+    --color-dark100: #{ $dark100 }
+    --color-dark200: #{ $dark200 }
+    --color-gray100: #{ $gray100 }
+    --color-gray200: #{ $gray200 }
+    --color-light100: #{ $light100 }
+    --color-light200: #{ $light200 }
+    --color-red100: #{ $red100 }
+    --color-red200: #{ $red200 }
+    --color-green100: #{ $green100 }
+    --color-green200: #{ $green200 }
+
+@mixin shadow($inset: false)
+  @if $inset
+    box-shadow: inset 0 0 5px 1px #454545
+  @else
+    box-shadow: 0 0 5px 1px #454545
+
+@mixin bg-theme($bg: $dark200, $color: $light100)
+  background-color: $bg
+  color: $color
+
+@mixin flex-colum($justify: start)
+  display: flex
+  flex-direction: column
+  justify-content: $justify
+
+@mixin flex-row($justify: start)
+  display: flex
+  flex-direction: row
+  justify-content: $justify
+
+@mixin border($direction: true, $color: $gray100)
+  @if $direction == right
+    border-right: 1px solid $color
+  @else if $direction == left
+    border-left: 1px solid $color
+  @else if $direction == bottom
+    border-bottom: 1px solid $color
+  @else if $direction == top
+    border-top: 1px solid $color
+  @else if $direction == top-bottom
+    border-top: 2px solid $color
+    border-bottom: 2px solid $color
+  @else if $direction == true
+    border: 1px solid $color
+    border-radius: 5px
+  @else
+    border: none
