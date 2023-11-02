@@ -1,10 +1,10 @@
+version: "3.8"
 services:
-  postgres:
+  db_laboratorio:
     image: postgres:16.0
-    container_name: pg_laboratorio
-    restart: always
+    container_name: db_laboratorio
     environment:
-      - POSTGRES_DB=${DATABASE}
+      - POSTGRES_DB=${DB}
       - POSTGRES_USER=${USER}
       - POSTGRES_PASSWORD=${PASSWORD}
     ports:
