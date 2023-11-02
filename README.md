@@ -3,8 +3,8 @@
 Exercício prático para educação em programação.
 
 #### Tecnologias utilizadas:
-- [Docker&copy](https://www.docker.com/products/docker-descktop/);
-- [Node JS&trade](https://www.nodejs.org);
+- [Docker&copy;](https://www.docker.com/products/docker-descktop/)
+- [Node JS&trade;](https://www.nodejs.org)
 
 ### Criação do banco de dados
 Crie um banco de dados PostgreSQL&copy; para servir a aplicação. Se preferir, user um contâiner para isso com o comando abaixo:
